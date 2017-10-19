@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="n5xproject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="n5xproject.war">
+      <element id="artifact" artifact-name="n5xproject:war exploded" />
+    </root>
+  </artifact>
+</component>
