@@ -57,7 +57,6 @@ public class TokenUtil {
     public static boolean isExpireLogin(long dateTime) throws  Exception{
         long SysTime = System.currentTimeMillis();
 
-
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Date  smdate=sdf.parse("2017-09-01");
         Calendar cal = Calendar.getInstance();
