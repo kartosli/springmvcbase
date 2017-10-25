@@ -76,7 +76,7 @@
     </bean>
 
     <!-- 事物切面配置 -->
-<!--    <bean id="transactionManager"
+    <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
@@ -89,9 +89,9 @@
     </tx:advice>
 
     <aop:config>
-        <aop:pointcut id="testService" expression="execution (* com.n5x.Service.*(..))"/>
+        <aop:pointcut id="testService" expression="execution (* com.n5x.Service.impl.*.*(..))"/>
         <aop:advisor advice-ref="advice" pointcut-ref="testService"/>
-    </aop:config>-->
+    </aop:config>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.n5x.Mapper"/>

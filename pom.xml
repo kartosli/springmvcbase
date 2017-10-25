@@ -126,11 +126,12 @@
             <artifactId>bcprov-jdk16</artifactId>
             <version>1.46</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.8</version>
-        </dependency>-->
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
         <dependency>
             <groupId>net.sf.json-lib</groupId>
@@ -138,6 +139,13 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
+
+        <!-- mongoDB支持jar -->
+<!--        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>1.8.4.RELEASE</version>
+        </dependency>-->
 
     </dependencies>
     <build>
@@ -167,4 +175,16 @@
             </resource>
         </resources>-->
     </build>
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
