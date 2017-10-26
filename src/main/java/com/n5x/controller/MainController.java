@@ -5,6 +5,8 @@ import com.github.pagehelper.PageInfo;
 import com.n5x.Model.User;
 import com.n5x.Model.UserTest;
 import com.n5x.Service.ITestUserService;
+import com.n5x.common.base.JsonModel;
+import com.n5x.common.base.ResponseCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,71 +37,20 @@ public class MainController extends BaseController{
         return "nice";
     }
 
-    @RequestMapping(value = "/toJsonXml")
-    @ResponseBody
-    public User toJsonXml(User user) {
-//        service.addUser(user); //一起测试了
-//        return service.findUserById(2);
-        return null;
-    }
-
-    @RequestMapping(value = "/toJson")
-    @ResponseBody
-    public List<User> toJson(User user) {
-//        service.addUser(user); //一起测试了
-//        return service.findAllUser();
-        return null;
-    }
-
-
-    @RequestMapping(value = "/toJsonCount")
-    @ResponseBody
-    public Map toJsonCount(User user) {
-//        service.addUser(user); //一起测试了
-//        int rescount =  service.getDataCount();
-//        Map res = new HashMap();
-//        res.put("count",rescount);
-//        return res;
-        return null;
-    }
-
-    @RequestMapping(value = "/toJsonList")
-    @ResponseBody
-    public List<UserTest> toJsonList(User user) {
-//        service.addUser(user); //一起测试了
-//        String username = user.getUsername();
-//        String password = user.getPassword();
-//        Map param = new HashMap();
-//        param.put("username",username);
-//        param.put("password",password);
-////        List<UserTest> uList = service.findUserList(param);
-//
-//        return uList;
-        return null;
-    }
-
-    @RequestMapping(value = "/toJsonListPage")
-    @ResponseBody
-    public List<UserTest> toJsonListPage(User user) {
-//        service.addUser(user); //一起测试了
-        String username = user.getUsername();
-        Map param = new HashMap();
-        param.put("username", username);
-        PageHelper.startPage(2, 2);
-//        List<UserTest> uList = service.findUserList(param);
-//        PageInfo<UserTest> users = new PageInfo<UserTest>(uList);
-//        List<UserTest> ulist =  users.getList();
-//        return ulist;
-        return null;
-    }
-
 
     @RequestMapping(value = "/toJsonListIU")
     @ResponseBody
-    public List<UserTest> toJsonItestU(User user) {
+    public JsonModel toJsonItestU(User user) {
 //        service.addUser(user); //一起测试了
         String test = request.getParameter("test");
         List list = iTestUserService.findUserList();
-        return list;
+
+        if(null==list){
+            //没有登录
+//            return getResultError(ResponseCode.Common_NotLogIn);
+            return getResultError(ResponseCode.Common_NotLogIn,"登录了嘛？小骚");
+        }
+        return getResult(list);
+//        return list;
     }
 }

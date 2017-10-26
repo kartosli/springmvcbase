@@ -1,5 +1,7 @@
 package com.n5x.controller;
 
+import com.n5x.common.base.JsonModel;
+import com.n5x.common.base.ResponseCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -121,6 +123,79 @@ public abstract class BaseController {
         int x = random.nextInt(899999);
         x = x+100000;
         return String.valueOf(x);
+    }
+
+
+    /**
+     * 返回jsonmodel格式数据
+     * @param rcode
+     * @param data
+     * @return
+     */
+    protected JsonModel getResult(String rcode, Object data) {
+        JsonModel result = new JsonModel();
+        result.setRcode(rcode);
+        result.setData(data);
+        result.setMessage(ResponseCode.getMessage(rcode));
+//        setHeader();
+        return result;
+    }
+
+    protected JsonModel getResult(String rcode,String msg, Object data) {
+        JsonModel result = new JsonModel();
+        result.setRcode(rcode);
+        result.setMessage(msg);
+        result.setData(data);
+//        setHeader();
+        return result;
+    }
+
+    protected JsonModel getResultError(String rcode, String... msgs) {
+        JsonModel result = new JsonModel();
+        result.setRcode(rcode);
+        String msg = "";
+        if (msgs != null && msgs.length > 0) {
+            if (msgs.length > 1) {
+                for (String m : msgs) {
+                    msg += m + "; ";
+                }
+            } else {
+                msg = msgs[0];
+            }
+        } else {
+            msg = ResponseCode.getMessage(rcode);
+        }
+
+        result.setMessage(msg);
+//        setHeader();
+        return result;
+    }
+
+    protected JsonModel getResult(Object data) {
+        JsonModel result = new JsonModel();
+        result.setRcode(ResponseCode.Common_Success);
+        result.setData(data);
+        result.setMessage(ResponseCode.getMessage(ResponseCode.Common_Success));
+//        setHeader();
+        return result;
+    }
+
+    protected JsonModel getResult(String rcode, List data) {
+        JsonModel result = new JsonModel();
+        result.setRcode(rcode);
+        result.setDatalist(data);
+        result.setMessage(ResponseCode.getMessage(rcode));
+//        setHeader();
+        return result;
+    }
+
+    protected JsonModel getResult(List data) {
+        JsonModel result = new JsonModel();
+        result.setRcode(ResponseCode.Common_Success);
+        result.setDatalist(data);
+        result.setMessage(ResponseCode.getMessage(ResponseCode.Common_Success));
+//        setHeader();
+        return result;
     }
 
 
