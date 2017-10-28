@@ -3,7 +3,7 @@ package com.n5x.Service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.n5x.Model.UserTest;
-import com.n5x.Model.UserTestExample;
+import com.n5x.Model.example.UserTestExample;
 import com.n5x.Service.ITestUserService;
 import com.n5x.Mapper.UserTestMapper;
 import org.springframework.beans.factory.annotation.Autowired;

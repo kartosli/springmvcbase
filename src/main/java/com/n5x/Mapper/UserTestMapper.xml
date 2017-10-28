@@ -67,7 +67,7 @@
   <sql id="Base_Column_List">
     id, username, password
   </sql>
-  <select id="selectByExample" parameterType="com.n5x.Model.UserTestExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.n5x.Model.example.UserTestExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -91,7 +91,7 @@
     delete from user_nothing
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.n5x.Model.UserTestExample">
+  <delete id="deleteByExample" parameterType="com.n5x.Model.example.UserTestExample">
     delete from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -128,7 +128,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.n5x.Model.UserTestExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="com.n5x.Model.example.UserTestExample" resultType="java.lang.Integer">
     select count(*) from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -244,7 +244,7 @@
   <sql id="Base_Column_List">
     id, username, password
   </sql>
-  <select id="selectByExample" parameterType="com.n5x.Model.UserTestExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.n5x.Model.example.UserTestExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -268,7 +268,7 @@
     delete from user_nothing
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.n5x.Model.UserTestExample">
+  <delete id="deleteByExample" parameterType="com.n5x.Model.example.UserTestExample">
     delete from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -305,7 +305,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.n5x.Model.UserTestExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="com.n5x.Model.example.UserTestExample" resultType="java.lang.Integer">
     select count(*) from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -421,7 +421,7 @@
   <sql id="Base_Column_List">
     id, username, password
   </sql>
-  <select id="selectByExample" parameterType="com.n5x.Model.UserTestExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.n5x.Model.example.UserTestExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -445,7 +445,7 @@
     delete from user_nothing
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.n5x.Model.UserTestExample">
+  <delete id="deleteByExample" parameterType="com.n5x.Model.example.UserTestExample">
     delete from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -482,7 +482,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.n5x.Model.UserTestExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="com.n5x.Model.example.UserTestExample" resultType="java.lang.Integer">
     select count(*) from user_nothing
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
