@@ -1,6 +1,6 @@
-package com.n5x.Service;
+package com.n5x.service;
 
-import com.n5x.Model.UserTest;
+import com.n5x.model.UserTest;
 
 import java.util.List;
 

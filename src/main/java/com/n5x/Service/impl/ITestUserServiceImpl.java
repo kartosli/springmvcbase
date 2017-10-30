@@ -1,11 +1,11 @@
-package com.n5x.Service.impl;
+package com.n5x.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.n5x.Model.UserTest;
-import com.n5x.Model.example.UserTestExample;
-import com.n5x.Service.ITestUserService;
-import com.n5x.Mapper.UserTestMapper;
+import com.n5x.model.UserTest;
+import com.n5x.model.example.UserTestExample;
+import com.n5x.service.ITestUserService;
+import com.n5x.mapper.UserTestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

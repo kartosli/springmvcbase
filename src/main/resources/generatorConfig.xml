@@ -15,12 +15,9 @@
                         userId="root" password="" />
 
         <!-- 生成的包名和工程名 -->
-        <javaModelGenerator targetPackage="com.n5x.Model"
-                            targetProject="src/main/java"/>
-        <sqlMapGenerator targetPackage="com.n5x.Mapper.mapperxml"
-                         targetProject="src/main/java" />
-        <javaClientGenerator targetPackage="com.n5x.Mapper"
-                             targetProject="src/main/java" type="XMLMAPPER" />
+        <javaModelGenerator targetPackage="com.n5x.model" targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="com.n5x.mapper" targetProject="src/main/java" />
+        <javaClientGenerator targetPackage="com.n5x.mapper" targetProject="src/main/java" type="XMLMAPPER" />
 
         <!-- 数据库表 -->
         <table  tableName="user_nothing" domainObjectName="UserTest">

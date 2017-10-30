@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.n5x.Mapper.UserTestMapper" >
-  <resultMap id="BaseResultMap" type="com.n5x.Model.UserTest" >
+<mapper namespace="com.n5x.mapper.UserTestMapper" >
+  <resultMap id="BaseResultMap" type="com.n5x.model.UserTest" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List" >
     id, username, password
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.n5x.Model.example.UserTestExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.n5x.model.example.UserTestExample" >
     select
     <if test="distinct" >
       distinct
@@ -91,19 +91,19 @@
     delete from user_nothing
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.n5x.Model.example.UserTestExample" >
+  <delete id="deleteByExample" parameterType="com.n5x.model.example.UserTestExample" >
     delete from user_nothing
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.n5x.Model.UserTest" >
+  <insert id="insert" parameterType="com.n5x.model.UserTest" >
     insert into user_nothing (id, username, password
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.n5x.Model.UserTest" >
+  <insert id="insertSelective" parameterType="com.n5x.model.UserTest" >
     insert into user_nothing
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -128,7 +128,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.n5x.Model.example.UserTestExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.n5x.model.example.UserTestExample" resultType="java.lang.Integer" >
     select count(*) from user_nothing
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -160,7 +160,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.n5x.Model.UserTest" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.n5x.model.UserTest" >
     update user_nothing
     <set >
       <if test="username != null" >
@@ -172,7 +172,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.n5x.Model.UserTest" >
+  <update id="updateByPrimaryKey" parameterType="com.n5x.model.UserTest" >
     update user_nothing
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR}

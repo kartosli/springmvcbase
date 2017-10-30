@@ -58,7 +58,7 @@
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="typeAliasesPackage" value="com.n5x.Model"/>
+        <property name="typeAliasesPackage" value="com.n5x.model"/>
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         <!--分页配置-->
@@ -89,14 +89,14 @@
     </tx:advice>
 
     <aop:config>
-        <aop:pointcut id="testService" expression="execution (* com.n5x.Service.impl.*.*(..))"/>
+        <aop:pointcut id="testService" expression="execution (* com.n5x.service.impl.*.*(..))"/>
         <aop:advisor advice-ref="advice" pointcut-ref="testService"/>
     </aop:config>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.n5x.Mapper"/>
+        <property name="basePackage" value="com.n5x.mapper"/>
     </bean>
 
     <context:annotation-config/>
-    <context:component-scan base-package="com.n5x.Service"/>
+    <context:component-scan base-package="com.n5x.service"/>
 </beans>

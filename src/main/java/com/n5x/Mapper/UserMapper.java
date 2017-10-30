@@ -1,6 +1,6 @@
-package com.n5x.Mapper;
+package com.n5x.mapper;
 
-import com.n5x.Model.User;
+import com.n5x.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
