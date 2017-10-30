@@ -46,21 +46,25 @@
             <value>com.mysql.jdbc.Driver</value>
         </property>
         <property name="url">
-            <value>jdbc:mysql://localhost:3306/utest?characterEncoding=UTF-8</value>
-
+            <value>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</value>
         </property>
         <property name="username">
             <value>root</value>
         </property>
         <property name="password">
-            <value></value>
+            <value>root</value>
         </property>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="typeAliasesPackage" value="com.n5x.model"/>
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <property name="mapperLocations">
+            <array>
+                <value>classpath:mapper/*.xml</value>
+                <value>classpath:com/n5x/model/*/*.xml</value>
+            </array>
+        </property>
         <!--分页配置-->
         <property name="plugins">
             <array>
