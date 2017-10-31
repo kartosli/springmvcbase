@@ -47,4 +47,20 @@ public class MainController extends BaseController {
         return getResult(list);
 //        return list;
     }
+
+    @RequestMapping(value = "/saveTestUser")
+    @ResponseBody
+    public JsonModel saveItestU(User user) {
+//        service.addUser(user); //一起测试了
+        String test = request.getParameter("test");
+        List list = iTestUserService.findUserList();
+
+        if (null == list) {
+            //没有登录
+//            return getResultError(ResponseCode.Common_NotLogIn);
+            return getResultError(ResponseCode.Common_NotLogIn, "登录了嘛？小骚");
+        }
+        return getResult(list);
+//        return list;
+    }
 }

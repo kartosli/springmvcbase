@@ -102,6 +102,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.n5x.model.user.UserLevel" >
+    <selectKey keyProperty="id" resultType="java.lang.String"
+               order="BEFORE">
+      select replace(uuid(),'-','') from dual
+    </selectKey>
     insert into USER_LEVEL (ID, NAME, CONSUME, 
       RECHARGE, CREATE_TIME, LAST_UPDATE_TIME, 
       DISABLE)

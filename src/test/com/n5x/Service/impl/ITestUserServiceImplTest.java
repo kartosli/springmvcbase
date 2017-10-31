@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +27,9 @@ public class ITestUserServiceImplTest {
     @Autowired
     UserTestMapper userMapper;
 
+    @Autowired
+    UserLevelMapper userLevelMapper;
+
     @Test
     public void findUserList() throws Exception {
         PageHelper.startPage(1, 2);
@@ -34,9 +39,17 @@ public class ITestUserServiceImplTest {
         List<UserTest> ulist = upage.getList();
     }
 
-
-    @Autowired
-    UserLevelMapper userLevelMapper;
+    @Test
+    public void saveUserLev() throws Exception {
+        UserLevel u  = new UserLevel();
+        u.setName("安徽省");
+        u.setDisable(false);
+        u.setConsume(new BigDecimal(22.2));
+        u.setRecharge(new BigDecimal(22.2));
+        u.setCreateTime(new Date());
+        u.setLastUpdateTime(new Date());
+        int row =  userLevelMapper.insert(u);
+    }
 
     @Test
     public void findULList() throws Exception {
