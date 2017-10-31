@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.n5x.Mapper.UserTestMapper;
 import com.n5x.Model.UserTest;
-import com.n5x.Model.UserTestExample;
+import com.n5x.Model.example.UserTestExample;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Administrator on 2017/10/26.

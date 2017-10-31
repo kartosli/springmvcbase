@@ -17,8 +17,8 @@
         <!-- 生成的包名和工程名 -->
         <javaModelGenerator targetPackage="com.n5x.Model"
                             targetProject="src/main/java"/>
-        <sqlMapGenerator targetPackage="com.n5x.Mapper.mapperxml"
-                         targetProject="src/main/java" />
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="src/main/resources" />
         <javaClientGenerator targetPackage="com.n5x.Mapper"
                              targetProject="src/main/java" type="XMLMAPPER" />
 

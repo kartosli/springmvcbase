@@ -1,9 +1,6 @@
 package com.n5x.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.n5x.Model.User;
-import com.n5x.Model.UserTest;
 import com.n5x.Service.ITestUserService;
 import com.n5x.common.base.JsonModel;
 import com.n5x.common.base.ResponseCode;
@@ -14,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class MainController extends BaseController{
