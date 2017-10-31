@@ -1,4 +1,4 @@
-package com.n5x.Model;
+package com.n5x.model;
 
 public class User {
 

@@ -1,4 +1,4 @@
-package com.n5x.Model.example;
+package com.n5x.model.example;
 
 import java.util.ArrayList;
 import java.util.List;

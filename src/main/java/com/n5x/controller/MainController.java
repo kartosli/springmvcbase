@@ -1,9 +1,8 @@
 package com.n5x.controller;
-
-import com.n5x.Model.User;
-import com.n5x.Service.ITestUserService;
 import com.n5x.common.base.JsonModel;
 import com.n5x.common.base.ResponseCode;
+import com.n5x.model.User;
+import com.n5x.service.ITestUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-public class MainController extends BaseController{
+public class MainController extends BaseController {
     @Autowired
     ITestUserService iTestUserService;
 
@@ -40,10 +39,10 @@ public class MainController extends BaseController{
         String test = request.getParameter("test");
         List list = iTestUserService.findUserList();
 
-        if(null==list){
+        if (null == list) {
             //没有登录
 //            return getResultError(ResponseCode.Common_NotLogIn);
-            return getResultError(ResponseCode.Common_NotLogIn,"登录了嘛？小骚");
+            return getResultError(ResponseCode.Common_NotLogIn, "登录了嘛？小骚");
         }
         return getResult(list);
 //        return list;

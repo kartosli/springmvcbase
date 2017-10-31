@@ -1,7 +1,7 @@
-package com.n5x.Mapper;
+package com.n5x.mapper;
 
-import com.n5x.Model.UserTest;
-import com.n5x.Model.example.UserTestExample;
+import com.n5x.model.UserTest;
+import com.n5x.model.example.UserTestExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

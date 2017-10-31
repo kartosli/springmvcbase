@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    <classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar"/>
+    <classPathEntry location="C:/Users\Administrator/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
     <context id="context1">
         <!-- 是否生成注释 -->
         <commentGenerator>
@@ -14,15 +14,13 @@
                         connectionURL="jdbc:mysql://localhost:3306/utest"
                         userId="root" password="" />
 
-        <!-- 生成的包名和工程名 -->
-        <javaModelGenerator targetPackage="com.n5x.Model"
-                            targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.n5x.model.user" targetProject="src/main/java"/>
         <sqlMapGenerator targetPackage="mapper"
                          targetProject="src/main/resources" />
-        <javaClientGenerator targetPackage="com.n5x.Mapper"
-                             targetProject="src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.n5x.mapper.user" targetProject="src/main/java" type="XMLMAPPER" />
 
         <!-- 数据库表 -->
+<!--        <table  tableName="USER_LEVEL" domainObjectName="UserLevel" >-->
         <table  tableName="user_nothing" domainObjectName="UserTest">
             <!-- 设置别名 -->
             <!--

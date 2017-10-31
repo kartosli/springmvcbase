@@ -2,19 +2,13 @@ package com.n5x.controller;
 
 import com.n5x.common.base.JsonModel;
 import com.n5x.common.base.ResponseCode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 /**
@@ -94,9 +88,10 @@ public abstract class BaseController {
     public void setSession(String key, Object obj) {
         HttpSession session = request.getSession(true);
         if (session != null) {
-            session.setAttribute(key,obj);
+            session.setAttribute(key, obj);
         }
     }
+
     public Object getSession(String key) {
         HttpSession session = request.getSession(true);
         if (session != null) {
@@ -104,8 +99,6 @@ public abstract class BaseController {
         }
         return null;
     }
-
-
 
 
     protected String getString(Object obj) {
@@ -118,16 +111,17 @@ public abstract class BaseController {
 
 
     //会生成小于100000的数
-    public static String getRandomNumberPassword(){
+    public static String getRandomNumberPassword() {
         Random random = new Random();
         int x = random.nextInt(899999);
-        x = x+100000;
+        x = x + 100000;
         return String.valueOf(x);
     }
 
 
     /**
      * 返回jsonmodel格式数据
+     *
      * @param rcode
      * @param data
      * @return
@@ -141,7 +135,7 @@ public abstract class BaseController {
         return result;
     }
 
-    protected JsonModel getResult(String rcode,String msg, Object data) {
+    protected JsonModel getResult(String rcode, String msg, Object data) {
         JsonModel result = new JsonModel();
         result.setRcode(rcode);
         result.setMessage(msg);
