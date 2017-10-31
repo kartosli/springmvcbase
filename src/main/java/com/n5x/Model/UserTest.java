@@ -3,9 +3,9 @@ package com.n5x.Model;
 public class UserTest {
     private Integer id;
 
-    private String username="";
+    private String username;
 
-    private String password="";
+    private String password;
 
     public Integer getId() {
         return id;
