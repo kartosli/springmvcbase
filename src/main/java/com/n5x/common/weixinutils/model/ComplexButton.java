@@ -1,4 +1,4 @@
-package com.n5x.common.weixinUtils.model;
+package com.n5x.common.weixinutils.model;
 
 /**
  * Created by Administrator on 2017/10/24.

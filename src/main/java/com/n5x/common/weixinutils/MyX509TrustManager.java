@@ -1,4 +1,4 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 
 import javax.net.ssl.X509TrustManager;
 import java.security.cert.CertificateException;

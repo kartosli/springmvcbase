@@ -1,4 +1,4 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 
 public class WeixinToken {
 	private String accessToken;

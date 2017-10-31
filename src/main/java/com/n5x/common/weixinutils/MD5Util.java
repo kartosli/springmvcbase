@@ -1,4 +1,4 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 import java.security.MessageDigest;
 
 public class MD5Util {

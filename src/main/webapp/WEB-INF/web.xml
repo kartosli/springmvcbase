@@ -26,7 +26,7 @@
   <!-- 安全,防攻击过滤器 -->
   <filter>
     <filter-name>SecurityFilter</filter-name>
-    <filter-class>com.n5x.common.Filter.SecurityFilter</filter-class>
+    <filter-class>com.n5x.common.filter.SecurityFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>SecurityFilter</filter-name>

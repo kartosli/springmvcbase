@@ -1,4 +1,4 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

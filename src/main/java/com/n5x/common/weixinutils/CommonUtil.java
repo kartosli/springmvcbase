@@ -1,7 +1,7 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 
 
-import com.n5x.common.weixinUtils.model.Menu;
+import com.n5x.common.weixinutils.model.Menu;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;

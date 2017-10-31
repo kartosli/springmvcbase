@@ -1,9 +1,9 @@
-package com.n5x.common.weixinUtils;
+package com.n5x.common.weixinutils;
 
-import com.n5x.common.weixinUtils.model.Button;
-import com.n5x.common.weixinUtils.model.CommonButton;
-import com.n5x.common.weixinUtils.model.ComplexButton;
-import com.n5x.common.weixinUtils.model.Menu;
+import com.n5x.common.weixinutils.model.Button;
+import com.n5x.common.weixinutils.model.CommonButton;
+import com.n5x.common.weixinutils.model.ComplexButton;
+import com.n5x.common.weixinutils.model.Menu;
 
 /**
  * Created by Administrator on 2017/10/24.
